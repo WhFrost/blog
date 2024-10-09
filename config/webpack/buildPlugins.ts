@@ -13,7 +13,7 @@ export function buildPlugins(
 	const plugins: webpack.WebpackPluginInstance[] = [];
 
 	plugins.push(
-		new HtmlWebpackPlugin({template: paths.html, favicon: paths.favicon}),
+		new HtmlWebpackPlugin({template: paths.html, favicon: paths.public}),
 	);
 
 	if (isDev) {

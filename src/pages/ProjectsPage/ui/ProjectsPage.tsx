@@ -1,4 +1,4 @@
-import favicon from '@/shared/assets/img/favicon.png';
+import favicon from 'shared/assets/img/favicon.png';
 
 function ProjectsPage() {
 	return (

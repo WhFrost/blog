@@ -22,22 +22,16 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 		],
 	};
 
-	const swcLoader = {
-		test: /\.m?js$/,
-		exclude: /(node_modules)/,
-		use: {
-			// `.swcrc` can be used to configure swc
-			loader: 'swc-loader',
-		},
-	};
-
 	const cssLoader = {
 		loader: 'css-loader',
 		options: {
 			sourceMap: isDev ? true : false,
 			modules: {
+				auto: /\.module\.\w+$/i,
 				namedExport: false,
-				localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]',
+				localIdentName: isDev
+					? '[path][name]__[local]--[hash:base64:5]'
+					: '[hash:base64:8]',
 			},
 		},
 	};
@@ -45,11 +39,8 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 	const scssLoader = {
 		test: /\.s[ac]ss$/i,
 		use: [
-			// Creates `style` nodes from JS strings
 			isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-			// Translates CSS into CommonJS
 			cssLoader,
-			// Compiles Sass to CSS
 			'sass-loader',
 		],
 	};

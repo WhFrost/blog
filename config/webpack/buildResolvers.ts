@@ -5,8 +5,8 @@ export function buildResolvers(options: BuildOptions): webpack.ResolveOptions {
 	const {paths} = options;
 	return {
 		extensions: ['.tsx', '.ts', '.js'],
-		alias: {
-			'@': paths.src,
-		},
+		modules: [paths.src, 'node_modules'],
+		mainFiles: ['index'],
+		alias: {},
 	};
 }

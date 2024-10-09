@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
 import {buildWebpackConfig} from './config/webpack/buildConfig';
-import {BuildEnv, BuildOptions, BuildPaths} from 'config/webpack/types/types';
+import {BuildEnv, BuildOptions, BuildPaths} from './config/webpack/types/types';
 
 export default (env: BuildEnv): webpack.Configuration => {
 	const mode = env.mode ?? 'development';
@@ -10,7 +10,7 @@ export default (env: BuildEnv): webpack.Configuration => {
 		output: path.resolve(__dirname, 'build'),
 		html: path.resolve(__dirname, 'public', 'index.html'),
 		src: path.resolve(__dirname, 'src'),
-		favicon: path.resolve(__dirname, 'public', 'favicon.ico'),
+		public: path.resolve(__dirname, 'public', 'favicon.ico'),
 	};
 	const isDev = mode === 'development';
 	const port = env.port ?? 3000;

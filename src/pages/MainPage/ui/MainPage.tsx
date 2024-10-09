@@ -1,4 +1,4 @@
-import LightThemeIcon from '@/shared/assets/img/ligth.svg';
+import LightThemeIcon from 'shared/assets/img/ligth.svg';
 
 function MainPage() {
 	return (
