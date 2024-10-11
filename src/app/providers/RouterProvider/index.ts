@@ -1,2 +1,2 @@
-export {appRoutes} from './lib/routes';
+export {AppRoutes} from '../../../shared/config/configRouter/configRouter';
 export {router} from './ui/Router';

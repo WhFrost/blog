@@ -1,22 +1,27 @@
 import {Suspense} from 'react';
 import {createBrowserRouter} from 'react-router-dom';
 import {ThemeProvider} from 'app/providers/ThemeProvider';
-import {appRoutes} from '../lib/routes';
+import {
+	AppRoutes,
+	AppRoutesPaths,
+} from '../../../../shared/config/configRouter/configRouter';
 import App from 'app/App';
 import {MainPage} from 'pages/MainPage';
-import {ProjectsPage} from 'pages/ProjectsPage';
+import {UserPage} from 'pages/UserPage';
+import {ErrorPage} from 'pages/ErrorPage';
 
 const routes = [
 	{
-		path: appRoutes.root,
+		path: AppRoutesPaths[AppRoutes.ROOT],
 		element: (
 			<ThemeProvider>
 				<App />
 			</ThemeProvider>
 		),
+		errorElement: <ErrorPage />,
 		children: [
 			{
-				path: appRoutes.main,
+				path: AppRoutesPaths[AppRoutes.MAIN],
 				element: (
 					<Suspense fallback={<div>Loading...</div>}>
 						<MainPage />
@@ -24,10 +29,10 @@ const routes = [
 				),
 			},
 			{
-				path: appRoutes.project,
+				path: AppRoutesPaths[AppRoutes.USER],
 				element: (
 					<Suspense fallback={<div>Loading...</div>}>
-						<ProjectsPage />
+						<UserPage />
 					</Suspense>
 				),
 			},
