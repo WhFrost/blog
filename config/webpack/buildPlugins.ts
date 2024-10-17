@@ -33,11 +33,9 @@ export function buildPlugins(
 				filename: 'css/[name].[contenthash:8].css',
 				chunkFilename: 'css/[name].[contenthash:8].css',
 			}),
-			// new CopyPlugin({
-			// 	patterns: [
-			// 		{from: `${paths.public}/locales`, to: `${paths.output}/locales/`},
-			// 	],
-			// }),
+			new CopyPlugin({
+				patterns: [{from: paths.localesEntry, to: paths.localesOutput}],
+			}),
 		);
 	}
 	if (analyzer) {
