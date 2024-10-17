@@ -12,6 +12,8 @@ export interface BuildPaths {
 	html: string;
 	src: string;
 	public: string;
+	localesEntry: string;
+	localesOutput: string;
 }
 
 export interface BuildOptions {

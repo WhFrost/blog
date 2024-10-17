@@ -11,6 +11,8 @@ export default (env: BuildEnv): webpack.Configuration => {
 		html: path.resolve(__dirname, 'public', 'index.html'),
 		src: path.resolve(__dirname, 'src'),
 		public: path.resolve(__dirname, 'public', 'favicon.ico'),
+		localesEntry: path.resolve(__dirname, 'public/locales'),
+		localesOutput: path.resolve(__dirname, 'build/locales'),
 	};
 	const isDev = mode === 'development';
 	const port = env.port ?? 3000;
