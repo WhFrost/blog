@@ -3,7 +3,7 @@ import {
 	LOCAL_STORAGE_THEME_KEY,
 	Theme,
 	ThemeContext,
-} from '../lib/ThemeContext';
+} from 'widgets/ThemeSwitcher';
 
 interface ThemeProviderProps {
 	children: ReactNode;

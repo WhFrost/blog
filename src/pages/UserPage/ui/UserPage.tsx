@@ -1,10 +1,11 @@
-import favicon from 'shared/assets/img/favicon.png';
+import {useTranslation} from 'react-i18next';
 
 function UserPage() {
+	const {t} = useTranslation('userPage');
+
 	return (
 		<>
-			<div>UserPage</div>
-			<img src={favicon} />
+			<div>{t('Пользователь')}</div>
 		</>
 	);
 }

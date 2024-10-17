@@ -1,0 +1,10 @@
+@import '../variables/colors.scss';
+
+.app.dark {
+	--main-bg: rgb(26, 29, 33);
+	--header-bg: rgb(42, 47, 52);
+	--footer-bg: rgb(33, 37, 41);
+	--sidebar-bg: rgb(36, 41, 45);
+
+	--main-font-color: rgb(206, 212, 218);
+}

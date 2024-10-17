@@ -1,5 +1,9 @@
+import {useTranslation} from 'react-i18next';
+
 function ErrorPage() {
-	return <div>404 Not found</div>;
+	const {t} = useTranslation('errorPage');
+
+	return <div>404 {t('Страница не найдена')}</div>;
 }
 
 export default ErrorPage;

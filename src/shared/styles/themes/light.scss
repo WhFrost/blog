@@ -1,0 +1,10 @@
+@import '../variables/colors.scss';
+
+.app.light {
+	--main-bg: rgb(241, 241, 241);
+	--header-bg: rgb(255, 255, 255);
+	--footer-bg: rgb(246, 248, 250);
+	--sidebar-bg: rgb(46, 50, 48);
+
+	--main-font-color: rgb(33, 37, 41);
+}

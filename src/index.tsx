@@ -1,6 +1,7 @@
 import {createRoot} from 'react-dom/client';
 import {RouterProvider} from 'react-router-dom';
 import {router} from 'app/providers/RouterProvider';
+import 'shared/configs/i18n/i18n';
 
 const app = document.getElementById('app');
 
