@@ -1,8 +1,8 @@
-@import './reset.scss';
-@import './variables/global.scss';
-@import './variables/colors.scss';
-@import './themes/dark.scss';
-@import './themes/light.scss';
+@import url('./reset.scss');
+@import url('./variables/global.scss');
+@import url('./variables/colors.scss');
+@import url('./themes/dark.scss');
+@import url('./themes/light.scss');
 
 .app {
 	font: var(--font-m);
@@ -10,9 +10,11 @@
 	color: var(--main-font-color);
 	min-height: 100vh;
 }
+
 .content-page {
 	display: flex;
 }
+
 .page-wrapper {
 	flex-grow: 1;
 	padding: 20px;

@@ -1,16 +1,10 @@
 import i18next from 'i18next';
 import {useState} from 'react';
-import clsx from 'clsx';
-import styles from './LangSwitcher.module.scss';
 import RuFlag from 'shared/assets/icons/russia.svg';
 import UsFlag from 'shared/assets/icons/us.svg';
 import {Button} from 'shared/ui';
 
-interface LangSwitcherProps {
-	className?: string;
-}
-
-export function LangSwitcher({className}: LangSwitcherProps) {
+export function LangSwitcher() {
 	const [lang, setLang] = useState(i18next.language);
 
 	const toggleLang = () => {
@@ -19,10 +13,7 @@ export function LangSwitcher({className}: LangSwitcherProps) {
 	};
 
 	return (
-		<Button
-			className={clsx(styles.langSwitcher, className)}
-			onClick={toggleLang}
-		>
+		<Button onClick={toggleLang}>
 			{lang === 'ru' ? (
 				<RuFlag width={20} height={20} />
 			) : (
