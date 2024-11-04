@@ -1,8 +1,8 @@
-@import url('./reset.scss');
-@import url('./variables/global.scss');
-@import url('./variables/colors.scss');
-@import url('./themes/dark.scss');
-@import url('./themes/light.scss');
+@import './reset';
+@import './variables/global';
+@import './variables/colors';
+@import './themes/dark';
+@import './themes/light';
 
 .app {
 	font: var(--font-m);

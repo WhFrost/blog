@@ -1,10 +1,9 @@
-@import url('../fonts.scss');
-@import url('./colors.scss');
+@import '../fonts';
+@import './colors';
 
 :root {
-	//  Fonts
-	--font-family-main: 'Rubik', 'Arial', sans-serif;Fonts--font-family-main
-
+	// Fonts
+	--font-family-main: 'Rubik', 'Arial', sans-serif;
 	--font-size-m: 16px;
 	--font-line-m: 24px;
 	--font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
@@ -13,14 +12,12 @@
 	--font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
 	// Sizes
-	--navbar-height: 50px;Sizes--navbar-height
-
+	--navbar-height: 50px;
 	--sidebar-width: 200px;
 	--sidebar-width-collapsed: 80px;
 
 	// Opacity
-	--opacity-bg: 0.18;Opacity--opacity-bg
-
+	--opacity-bg: 0.18;
 	--opacity-s: 0.25;
 	--opacity-m: 0.5;
 	--opacity-l: 0.75;
@@ -30,5 +27,5 @@
 		180deg,
 		rgb(255 255 255 / 15%),
 		rgb(255 255 255 / 0%) 100%
-	);Gradient--gradient-bg
+	);
 }
